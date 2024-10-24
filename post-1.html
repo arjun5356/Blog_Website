@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build a Blog Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007ACC;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.00rem;
+    margin: auto;
+}
+
+/* Styling for the main article */
+.full-post {
+    background-color: white;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.full-post h2 {
+    font-size: 2rem;
+    color: #007ACC;
+    margin-bottom: 15px;
+}
+
+.full-post .date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.full-post p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.full-post ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.full-post ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+}
+
+/* Styling for code snippets */
+.full-post pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-left: 4px solid #007ACC;
+    overflow-x: auto;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+/* Footer styling */
+
+/* Footer styling */
+footer {
+    background-color: #007ACC;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 5px solid #005ea1;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>How to Build a Blog Website: A Step-by-Step Guide</h1>
+    </header>
+
+    <main>
+        <article class="full-post">
+            <h2>The Complete Journey of Creating a Stunning Blog</h2>
+            <p class="date">October 24, 2024</p>
+            <p class="content">
+                In today’s digital world, having your own blog not only provides a platform to share your thoughts, expertise, and creativity, but also establishes a personal brand. Building a blog from scratch may seem intimidating at first, but with the right guidance, it’s a rewarding experience that can enhance your web development skills and give you a strong online presence.
+            </p>
+
+            <h3>1. Structuring Your Blog with HTML</h3>
+            <p>
+                Every website begins with HTML, and your blog is no different. HTML gives structure to your content, allowing you to define headers, paragraphs, and images. When building your blog, it’s important to ensure your HTML is semantic, meaning you use tags like &lt;header&gt;, &lt;main&gt;, &lt;section&gt;, and &lt;footer&gt; to enhance accessibility and SEO.
+            </p>
+            <p>
+                Begin with a simple layout:
+            </p>
+            <pre>
+&lt;header&gt; - For your blog title and navigation links
+&lt;main&gt;   - For your blog posts
+&lt;footer&gt; - For copyright information and social links
+            </pre>
+            <p>
+                This structure not only makes your website more organized but also more user-friendly.
+            </p>
+
+            <h3>2. Styling Your Blog with CSS</h3>
+            <p>
+                Now that you’ve structured your blog, it’s time to add some personality. CSS is what makes your blog visually appealing, and it’s crucial to define a color scheme and typography that reflect your blog’s tone. Do you want your blog to look modern, minimalistic, or vibrant? Here are some essential tips:
+            </p>
+            <ul>
+                <li><strong>Color Scheme:</strong> Choose a primary color for your headers and buttons, and a secondary color for links and highlights. Make sure the colors complement each other and don’t strain the eyes.</li>
+                <li><strong>Fonts:</strong> Use web-safe fonts or load custom fonts through Google Fonts. Your headers should stand out, while your body text remains highly readable.</li>
+                <li><strong>Layout:</strong> Use CSS Flexbox or Grid to create responsive layouts that look great on both desktop and mobile devices.</li>
+            </ul>
+
+            <h3>3. Adding Interactivity with JavaScript</h3>
+            <p>
+                Your blog’s functionality can be significantly enhanced with JavaScript. A simple yet powerful feature you can add is a dark mode toggle, allowing users to switch between light and dark themes for a more comfortable reading experience. JavaScript is also useful for creating dynamic features like loading new blog posts, comment sections, and interactive menus.
+            </p>
+            <p>
+                Here’s an example of how a dark mode toggle can be implemented:
+            </p>
+            <pre>
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+            </pre>
+
+            <h3>4. Enhancing User Experience (UX)</h3>
+            <p>
+                Aside from aesthetics and interactivity, it's important to focus on user experience. Here are some best practices to improve your blog's UX:
+            </p>
+            <ul>
+                <li><strong>Navigation:</strong> Make sure your navigation is intuitive, with clear links to different sections of your blog.</li>
+                <li><strong>Readability:</strong> Break down long posts with headings, bullet points, and images to keep the reader engaged.</li>
+                <li><strong>Performance:</strong> Optimize your images and use lazy loading to ensure your blog loads quickly, especially on mobile devices.</li>
+            </ul>
+
+            <h3>5. Publishing and Maintaining Your Blog</h3>
+            <p>
+                Once your blog is designed, it’s time to publish it. You can use hosting platforms like GitHub Pages, Netlify, or WordPress, depending on your needs. After publishing, it's important to keep your content updated regularly. Blog posts about your niche or expertise can attract a loyal audience.
+            </p>
+            <p>
+                Additionally, always stay on top of website performance by analyzing metrics like loading times, user engagement, and mobile responsiveness. The better the experience, the more users will return to your blog.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                Building a blog from scratch is a great way to showcase your web development skills and share your knowledge with the world. By following these steps, you’ll have a visually appealing, user-friendly, and interactive blog in no time. Continue to improve and refine it as you learn more, and your blog will grow with you!
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+        <a href="index.html">Back to Home</a>
+    </footer>
+</body>
+</html>

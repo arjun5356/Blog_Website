@@ -1,0 +1,385 @@
+/* Header styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #333;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcc00;
+    left: 0;
+    bottom: -8px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Main Blog Layout */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.post {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid #ffcc00;
+}
+
+.post-content {
+    padding: 20px 30px;
+}
+
+.post h2 {
+    font-size: 26px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.post .date {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.post .content {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: white;
+    background-color: #ffcc00;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.read-more:hover {
+    background-color: #ff9900;
+}
+
+/* Grid Layout for Larger Screens */
+@media (min-width: 768px) {
+    #posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #bbb;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffcc00;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+
+/* Scroll-to-Top Button Styles */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ffcc00;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+
+
+
+/* Dark Mode Functionality */
+
+/* Default light mode */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #eee;              /* Light text */
+}
+
+.dark-mode header {
+    background-color: #1a1a1a;
+    color: #eee;
+}
+
+.dark-mode .post {
+    background-color: #1a1a1a;
+    color: #eee;
+}
+
+.dark-mode .post img {
+    filter: brightness(0.8); /* Darken images slightly in dark mode */
+}
+
+/* Additional styling for dark mode as needed */
+
+
+/* Styling the Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background-color: #333; /* Dark background for the button */
+    color: #fff;            /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;    /* Rounded corners for a modern look */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+#dark-mode-toggle:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow on focus */
+}
+
+/* Adjusting button style for dark mode */
+.dark-mode #dark-mode-toggle {
+    background-color: #fff;  /* Light background in dark mode */
+    color: #333;             /* Dark text color */
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    background-color: #ddd; /* Slightly darker background on hover in dark mode */
+}
+
+
+/* Styling the Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background-color: #007bff; /* Primary color for the button */
+    color: #fff;               /* White text color */
+    border: none;              /* No border */
+    padding: 10px 20px;        /* Spacing inside the button */
+    border-radius: 30px;       /* Smooth rounded corners */
+    font-size: 16px;           /* Slightly larger font size */
+    font-weight: bold;         /* Make the text bold */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#dark-mode-toggle:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Glowing effect on focus */
+}
+
+/* Adjusting button style for dark mode */
+.dark-mode #dark-mode-toggle {
+    background-color: #ddd;   /* Light background in dark mode */
+    color: #333;              /* Dark text color */
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    background-color: #bbb;   /* Darker background on hover in dark mode */
+}
+
+
+
+
+
